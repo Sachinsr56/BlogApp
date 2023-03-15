@@ -12,7 +12,7 @@ const NewPost = () => {
       <form className="createForm">
         <div className="createFormGroup">
           <label htmlFor="FileInput">
-            <i class="createIcon fa-solid fa-pen"></i>
+            <i className="createIcon fa-solid fa-pen"></i>
           </label>
           <input
             id="fileInput"

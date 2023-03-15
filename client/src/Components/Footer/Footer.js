@@ -3,8 +3,8 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div id="Footer">
-      <footer class="bg-light text-center text-white">
-        <div class="container">
+      <footer className="bg-light text-center text-white">
+        <div className="container">
           <section>
             <a
               className="btn text-white btn-floating m-1"
@@ -61,11 +61,11 @@ const Footer = () => {
           </section>
         </div>
         <div
-          class="text-center p-3"
+          className="text-center p-3"
           style={{ "background-color": "rgba(0, 0, 0, 0.2)" }}
         >
           © 2020 Copyright:
-          <a class="text-white" href="/">
+          <a className="text-white" href="/">
             sachinsmr56@gmail.com
           </a>
         </div>
