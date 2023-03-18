@@ -1,28 +1,19 @@
 import React from "react";
 import "./Post.css";
-const Post = ({ img }) => {
+const Post = ({ post }) => {
+  const postUrl = `/post/${post._id}`;
   return (
     <div className="Post">
-      <img className="PostImg" src={img} alt="" />
+      <img className="PostImg" src={post.photo} alt="" />
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">
-            <a className="link" href="/posts?cat=Music">
-              Music
-            </a>
-          </span>
-          <span className="postCat">
-            <a className="link" href="/posts?cat=Music">
-              Life
-            </a>
-          </span>
+          {post.categories.map((c) => {
+            return <span className="postCat">{c}</span>;
+          })}
         </div>
-        <span className="postTitle">
-          <a href="/post/abc" className="link">
-            Lorem ipsum dolor sit amet
-          </a>
-        </span>
-        <hr />
+        <a href={postUrl} className="link">
+          <span className="postTitle">{post.title}</span>
+        </a>
         <span className="postDate">1 hour ago</span>
       </div>
       <p className="postDesc">

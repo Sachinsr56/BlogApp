@@ -8,7 +8,7 @@ const Footer = () => {
           <section>
             <a
               className="btn text-white btn-floating m-1"
-              style={{ "background-color": "#ac2bac" }}
+              style={{ "backgroundColor": "#ac2bac" }}
               href="https://www.instagram.com/ksachin___/"
               role="button"
             >
@@ -17,7 +17,7 @@ const Footer = () => {
 
             <a
               className="btn text-white btn-floating m-1"
-              style={{ "background-color": "#0082ca" }}
+              style={{ "backgroundColor": "#0082ca" }}
               href="https://www.linkedin.com/in/sachinsr56/"
               role="button"
             >
@@ -26,7 +26,7 @@ const Footer = () => {
 
             <a
               className="btn text-white btn-floating m-1"
-              style={{ "background-color": "#333333" }}
+              style={{ "backgroundColor": "#333333" }}
               href="https://github.com/Sachinsr56"
               role="button"
             >
@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
             <a
               className="btn text-white btn-floating m-1"
-              style={{ "background-color": "#3b5998" }}
+              style={{ "backgroundColor": "#3b5998" }}
               href="#!"
               role="button"
             >
@@ -43,7 +43,7 @@ const Footer = () => {
 
             <a
               className="btn text-white btn-floating m-1"
-              style={{ "background-color": "#55acee" }}
+              style={{ "backgroundColor": "#55acee" }}
               href="#!"
               role="button"
             >
@@ -52,7 +52,7 @@ const Footer = () => {
 
             <a
               className="btn text-white btn-floating m-1"
-              style={{ "background-color": "#dd4b39" }}
+              style={{ "backgroundColor": "#dd4b39" }}
               href="#!"
               role="button"
             >
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <div
           className="text-center p-3"
-          style={{ "background-color": "rgba(0, 0, 0, 0.2)" }}
+          style={{ "backgroundColor": "rgba(0, 0, 0, 0.2)" }}
         >
           © 2020 Copyright:
           <a className="text-white" href="/">

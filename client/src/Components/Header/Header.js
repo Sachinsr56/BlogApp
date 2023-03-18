@@ -8,7 +8,7 @@ function Header() {
       <div className="header-left">
         <a
           className="btn text-black btn-floating m-1"
-          // style={{ "background-color": "#ac2bac" }}
+          // style={{ "backgroundColor": "#ac2bac" }}
           href="https://www.instagram.com/ksachin___/"
           role="button"
         >
@@ -17,7 +17,7 @@ function Header() {
 
         <a
           className="btn text-black btn-floating m-1"
-          // style={{ "background-color": "#0082ca" }}
+          // style={{ "backgroundColor": "#0082ca" }}
           href="https://www.linkedin.com/in/sachinsr56/"
           role="button"
         >
@@ -26,7 +26,7 @@ function Header() {
 
         <a
           className="btn text-black btn-floating m-1"
-          // style={{ "background-color": "#333333" }}
+          // style={{ "backgroundColor": "#333333" }}
           href="https://github.com/Sachinsr56"
           role="button"
         >
@@ -34,7 +34,7 @@ function Header() {
         </a>
         <a
           className="btn text-black btn-floating m-1"
-          // style={{ "background-color": "#3b5998" }}
+          // style={{ "backgroundColor": "#3b5998" }}
           href="#!"
           role="button"
         >
