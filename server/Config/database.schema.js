@@ -55,10 +55,12 @@ const PostSchema = new mongoose.Schema(
     photo: {
       type: String,
       required: false,
+      default:"https://images.pexels.com/photos/1844012/pexels-photo-1844012.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
-    username: {
-      type: String,
+    userId: {
+      type: "ObjectId",
       required: true,
+      ref:"users"
     },
     categories: {
       type: Array,
