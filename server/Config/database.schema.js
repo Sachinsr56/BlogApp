@@ -19,8 +19,6 @@ const UserSchema = new mongoose.Schema(
     },
     profilePic: {
       type: String,
-      default:
-        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   },
   { timestamps: true }
@@ -55,7 +53,6 @@ const PostSchema = new mongoose.Schema(
     photo: {
       type: String,
       required: false,
-      default:"https://images.pexels.com/photos/1844012/pexels-photo-1844012.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     userId: {
       type: "ObjectId",
