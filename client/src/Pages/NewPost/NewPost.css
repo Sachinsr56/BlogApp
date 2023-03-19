@@ -33,6 +33,7 @@
 }
 .createInput {
   font-size: 30px;
+  width: 100%;
   border: none;
   width: 70vw;
 }

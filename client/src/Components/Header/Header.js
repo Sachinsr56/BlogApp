@@ -7,6 +7,7 @@ function Header() {
   const handleLogOut = () => {
     dispatch({ type: "LOGOUT" });
   };
+  const PF = "http://localhost:5000/images/";
   return (
     <div className="Header">
       <div className="header-left">
@@ -59,7 +60,7 @@ function Header() {
         {user ? (
           <a href="/settings">
             <img
-              src={user.profilePic}
+              src={PF + user.profilePic}
               className="headerImg"
               alt="Profile"
             ></img>
