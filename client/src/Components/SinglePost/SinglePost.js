@@ -9,6 +9,9 @@ const SinglePost = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [user, setUser] = useState();
+
+  const PF = "http://localhost:5000/images/";
+
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/post/" + path);
@@ -24,7 +27,7 @@ const SinglePost = () => {
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        <img className="singlePostImg" src={post.photo} alt="" />
+        <img className="singlePostImg" src={PF + post.photo} alt="" />
         <h1 className="singlePostTitle">{title}</h1>
         <div className="singlePostEdit">
           <i className="singlePostIcon far fa-2x fa-edit"></i>
@@ -34,7 +37,7 @@ const SinglePost = () => {
           <span>
             Author:
             <b className="singlePostAuthor">
-              <a className="link" href="/posts?username=Sachin">
+              <a className="link" href={`/?user=${post.userId}`}>
                 {user}
               </a>
             </b>

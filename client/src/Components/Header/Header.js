@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../Context/Context";
 import "./Header.css";
 
 function Header() {
-  const user = true;
+  const { user, dispatch } = useContext(Context);
+  const handleLogOut = () => {
+    dispatch({ type: "LOGOUT" });
+  };
   return (
     <div className="Header">
       <div className="header-left">
         <a
           className="btn text-black btn-floating m-1"
-          // style={{ "backgroundColor": "#ac2bac" }}
           href="https://www.instagram.com/ksachin___/"
           role="button"
         >
@@ -17,27 +20,19 @@ function Header() {
 
         <a
           className="btn text-black btn-floating m-1"
-          // style={{ "backgroundColor": "#0082ca" }}
           href="https://www.linkedin.com/in/sachinsr56/"
-          role="button"
         >
           <i className="fab fa-linkedin-in "></i>
         </a>
 
         <a
           className="btn text-black btn-floating m-1"
-          // style={{ "backgroundColor": "#333333" }}
           href="https://github.com/Sachinsr56"
           role="button"
         >
           <i className="fab fa-github "></i>
         </a>
-        <a
-          className="btn text-black btn-floating m-1"
-          // style={{ "backgroundColor": "#3b5998" }}
-          href="#!"
-          role="button"
-        >
+        <a className="btn text-black btn-floating m-1" href="#!" role="button">
           <i className="fab fa-facebook-f "></i>
         </a>
       </div>
@@ -52,28 +47,34 @@ function Header() {
           <li className="header-listItem">Contact</li>
           <li className="header-listItem">
             <a className="link" href="/create">
-              Blog
+              Create
             </a>
+          </li>
+          <li className="header-listItem" onClick={handleLogOut}>
+            {user && "LOGOUT"}
           </li>
         </div>
       </div>
       <div className="header-right">
         {user ? (
           <a href="/settings">
-          <img
-            src="https://images.pexels.com/photos/1274113/pexels-photo-1274113.jpeg?auto=compress&cs=tinysrgb&w=600"
-            className="headerImg"
-            alt="njasdkv"
-          ></img></a>
+            <img
+              src={user.profilePic}
+              className="headerImg"
+              alt="Profile"
+            ></img>
+          </a>
         ) : (
-          <ul className="headerList">
-            <li className="headerListItem">
+          <ul className="header-list">
+            <li className="header-listItem">
               <a href="/login" className="link">
                 Login
               </a>
             </li>
-            <li href="/register" className="lnk">
-              Signup
+            <li className="header-listItem">
+              <a href="/register" className="link">
+                Signup
+              </a>
             </li>
           </ul>
         )}

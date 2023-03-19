@@ -10,12 +10,12 @@ const Home = () => {
   const { search } = useLocation();
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/post" );
+      const res = await axios.get("/post"+search );
       console.log(res.data)
       setPosts(res.data);
     };
     fetchPosts();
-  }, []);
+  }, [search]);
 
   return (
     <>

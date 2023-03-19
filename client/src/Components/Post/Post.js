@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Post.css";
 const Post = ({ post }) => {
+  const [user, setUser] = useState();
   const postUrl = `/post/${post._id}`;
+  const PF = "http://localhost:5000/images/";
+  useEffect(() => {
+    const getUser = async () => {
+      const users = await axios.get("/user/" + post.userId);
+      setUser(users.data.username);
+    };
+    getUser();
+    // eslint-disable-next-line
+  }, []);
   return (
     <div className="Post">
-      <img className="PostImg" src={post.photo} alt="" />
+      <img className="PostImg" src={PF + post.photo} alt="" />
       <div className="postInfo">
         <div className="postCats">
           {post.categories.map((c) => {
@@ -14,14 +25,23 @@ const Post = ({ post }) => {
         <a href={postUrl} className="link">
           <span className="postTitle">{post.title}</span>
         </a>
-        <span className="postDate">1 hour ago</span>
+        <hr/>
       </div>
-      <p className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-        fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-        atque, exercitationem quibusdam, reiciendis odio laboriosam?
-      </p>
+      <div className="singlePostInfo">
+        <span>
+          Author:
+          <b className="singlePostAuthor">
+            <a className="link" href={`/?user=${post.userId}`}>
+              {user}
+            </a>
+          </b>
+        </span>
+        <span className="postDate">
+          {" "}
+          {new Date(post.createdAt).toDateString()}
+        </span>
+      </div>
+      <p className="postDesc">{post.desc}</p>
     </div>
   );
 };

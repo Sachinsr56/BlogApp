@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from "react";
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Sidebar.css";
 
 function Sidebar() {
@@ -28,10 +28,12 @@ function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
-          {cats.map((c)=>{
-            return<a className="link" href="/posts?cat=Life">
-            <li className="sidebarListItem">{c.name}</li>
-          </a>;
+          {cats.map((c) => {
+            return (
+              <a className="link" href={`/?cat=${c.name}`}>
+                <li className="sidebarListItem">{c.name}</li>
+              </a>
+            );
           })}
         </ul>
       </div>

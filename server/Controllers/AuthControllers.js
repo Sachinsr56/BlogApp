@@ -25,7 +25,7 @@ const registerUser = asyncHandler(async (req, res) => {
       _id: user._id,
       username: user.username,
       email: user.email,
-      pic: user.pic,
+      profilePic: user.profilePic,
     });
   } else {
     res.status(400);
@@ -41,7 +41,7 @@ const authUser = asyncHandler(async (req, res) => {
       _id: user._id,
       username: user.username,
       email: user.email,
-      pic: user.pic,
+      profilePic: user.profilePic,
     });
   }else{
     res.status(401);
