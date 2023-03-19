@@ -7,9 +7,9 @@
 }
 .singlePostImg {
   width: 50rem;
-  height: 25rem;
+  height: 30rem;
   border-radius: 10px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .singlePostTitle {
@@ -57,4 +57,32 @@
   margin-left: 20px;
   font-size: 30px;
   font-weight: 600;
+}
+
+.singlePostDescInput {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  width: 100%;
+  line-height: 25px;
+}
+
+.singlePostDescInput:focus {
+  outline: none;
+}
+.singlePostButton {
+  width: 100px;
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+.singlePostTitleInput{
+  width: 100%;
+  border: none;
+  padding: 1%;
 }

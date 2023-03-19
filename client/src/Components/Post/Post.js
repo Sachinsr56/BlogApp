@@ -18,14 +18,16 @@ const Post = ({ post }) => {
       <img className="PostImg" src={PF + post.photo} alt="" />
       <div className="postInfo">
         <div className="postCats">
+          {post.categories.length?"Category":""}
           {post.categories.map((c) => {
-            return <span className="postCat">{c}</span>;
+            return <a className="link" href={`/?cat=${c}`}><span className="postCat">{c}</span></a>;
           })}
         </div>
         <a href={postUrl} className="link">
+          Title:
           <span className="postTitle">{post.title}</span>
         </a>
-        <hr/>
+        <hr />
       </div>
       <div className="singlePostInfo">
         <span>
