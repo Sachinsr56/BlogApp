@@ -4,8 +4,7 @@
 }
 
 .createImg {
-  margin-left: 150px;
-  min-width: 80%;
+  width: 60%;
   height: 300px;
   border-radius: 10px;
   object-fit: cover;
@@ -16,7 +15,6 @@
 }
 
 .createFormGroup {
-  margin-left: 150px;
   display: flex;
   align-items: center;
 }
@@ -48,19 +46,41 @@
 
 .createText{
   font-size: 15px;
-    width: 70vw;
 }
 
 .createSubmit{
     position: absolute;
-    top: 20px;
-    right: 50px;
+    top: 100%;
+    margin-top: 20px;
     color: white;
     background-color: teal;
-    padding: 10px;border: none;border-radius: 10px;
+    border: none;border-radius: 10px;
+    padding: 10px;
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
     display: flex;
     align-items: center;
+}
+
+.wid{
+  position: absolute;
+  height: 20%;
+  top: 20%;
+  right: 5%;
+  width: 150px;
+}
+
+.createCategory{
+  position: absolute;
+  height: 5%;
+  top: 50%;
+  right: 5%;
+  width: 150px;
+}
+.createCategorybutton{
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  width: 150px;
 }

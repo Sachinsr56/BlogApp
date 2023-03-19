@@ -12,16 +12,21 @@ function Settings() {
 
   const { user, dispatch } = useContext(Context);
   const PF = "http://localhost:5000/images/";
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
     const updatedUser = {
       userId: user._id,
-      username,
-      email,
-      password,
     };
+    if (username !== "") {
+      updatedUser.username = username;
+    }
+    if (password !== "") {
+      updatedUser.password = password;
+    }
+    if (email !== "") {
+      updatedUser.email = email;
+    }
     if (file) {
       const data = new FormData();
       const filename = Date.now() + file.name;
@@ -36,6 +41,7 @@ function Settings() {
       const res = await axios.put("/user/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
+      window.location.replace("/");
     } catch (err) {
       dispatch({ type: "UPDATE_FAILURE" });
     }

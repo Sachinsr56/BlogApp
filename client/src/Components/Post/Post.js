@@ -18,7 +18,7 @@ const Post = ({ post }) => {
       <img className="PostImg" src={PF + post.photo} alt="" />
       <div className="postInfo">
         <div className="postCats">
-          {post.categories.length?"Category":""}
+          {post.categories.length?"Category: ":""}
           {post.categories.map((c) => {
             return <a className="link" href={`/?cat=${c}`}><span className="postCat">{c}</span></a>;
           })}
