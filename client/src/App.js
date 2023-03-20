@@ -11,6 +11,7 @@ import Register from "./Pages/Register/Register";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./Context/Context";
+import Category from "./Pages/Category/Category";
 
 function App() {
   const { user } = useContext(Context);
@@ -41,6 +42,7 @@ function App() {
             <Route path="/settings" exact element={<Register />} />
           )}
           <Route path="/post/:id" exact element={<Single />} />
+          <Route path="/categories" exact element={<Category />} />
         </Routes>
       </Router>
       <Footer />

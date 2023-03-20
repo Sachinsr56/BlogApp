@@ -106,6 +106,9 @@ const NewPost = () => {
             return <option value={c.name}>{c.name}</option>;
           })}
         </select>
+        <button className="btn btn-secondary addCat">
+          <a href="/categories"> Add Categories</a>
+        </button>
       </div>
     </div>
   );

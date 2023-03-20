@@ -63,6 +63,12 @@
     align-items: center;
 }
 
+.addCat{
+  position: absolute;
+  top: 50%;
+  right: 6%;
+}
+
 .wid{
   position: absolute;
   height: 20%;
