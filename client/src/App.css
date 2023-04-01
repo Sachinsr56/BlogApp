@@ -4,3 +4,11 @@
 .App {
   min-height: 70vh;
 }
+
+.shadow-effect {
+  box-shadow: rgba(92, 124, 146, 0.25) 0px 0px 0px,
+    rgba(149, 165, 176, 0.25) 0px -12px 30px,
+    rgba(140, 159, 172, 0.25) 0px 4px 6px,
+    rgba(142, 167, 184, 0.25) 0px 12px 13px,
+    rgba(156, 176, 189, 0.25) 0px 0px 0px;
+}

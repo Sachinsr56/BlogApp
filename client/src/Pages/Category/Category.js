@@ -32,10 +32,10 @@ const Category = () => {
     <div className="category">
       <div className="container">
         <div className="row">
-          <div className="col-md-12 bg-secondary-theme p-5 shadow-effect">
+          <div className="col-md-12 bg-secondary-theme mt-5 pt-4 pb-5 shadow-effect">
             <h3 className="text-center text-theme-primary">Add Categories</h3>
             <p className="text-center mb-5">Add your categories here...!</p>
-            <form action="" className=" text-center">
+            <form action="" className="text-">
               <div className="form-group col-md-10">
                 <input
                   type="text"
@@ -55,7 +55,7 @@ const Category = () => {
           </div>
         </div>
       </div>
-      <div className="row mb-5">
+      <div className="row mb-5  mt-3">
         <div className="col-md-3"></div>
         <div className="col-md-6">
           <div className="card shadow-effect">
