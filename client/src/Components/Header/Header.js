@@ -12,6 +12,8 @@ function Header() {
     <div className="Header">
       <div className="header-left">
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn text-black btn-floating m-1"
           href="https://www.instagram.com/ksachin___/"
           role="button"
@@ -21,12 +23,16 @@ function Header() {
 
         <a
           className="btn text-black btn-floating m-1"
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.linkedin.com/in/sachinsr56/"
         >
           <i className="fab fa-linkedin-in "></i>
         </a>
 
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn text-black btn-floating m-1"
           href="https://github.com/Sachinsr56"
           role="button"
@@ -44,8 +50,6 @@ function Header() {
               Home
             </a>
           </li>
-          <li className="header-listItem">About</li>
-          <li className="header-listItem">Contact</li>
           <li className="header-listItem">
             <a className="link" href="/create">
               Create

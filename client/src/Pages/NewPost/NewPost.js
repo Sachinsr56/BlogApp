@@ -157,6 +157,7 @@ const NewPost = () => {
                 height: "50px",
                 fontWeight: "500",
                 justifyContent: "center",
+                width:'fit-content'
               }}
               href="/categories"
             >
